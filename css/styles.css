@@ -63,14 +63,15 @@ p {
     padding-left: 25px;
     margin-right: auto;
     margin-left: auto;
-    padding-top: 30px;
+    padding-top: 50px;
+    padding-bottom: 40px;
 }
 .container-fixes {
-  height: 600px;
+  height: 510px;
   display: flex;
   justify-content: center;
   align-items: end;
-  bottom: 0;
+  bottom: 700px;
   position: absolute;
   left: 0;
   right: 0;
