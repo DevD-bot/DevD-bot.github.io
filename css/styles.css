@@ -52,8 +52,8 @@ body {
   display: initial; /* reset Font Awesome's display:inline-block */
 }
 .avatar-profile {
-  border-radius: 50%;
-  width: 15vw;
+  border-radius: 50% !important;
+  width: 15vw !important;
 }
 .fixed-col {
   padding: 5px;
@@ -286,3 +286,29 @@ p {
   -o-animation: rotating 2s linear infinite;
   animation: rotating 2s linear infinite;
 }
+/* 
+.image-container {
+  position: relative;
+  border-radius: 50% !important;
+  width: 15vw !important;
+}
+
+.image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: opacity 1s ease-in-out;
+}
+
+#image2 {
+  opacity: 0; /* Initially hidden */
+}
+
+/* @keyframes crossfade {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+} */ */

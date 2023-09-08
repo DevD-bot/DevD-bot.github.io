@@ -1,449 +1,377 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
 
-    <title>DEVYANSH SINGH</title>
-    <meta name="description" content="Devyansh Protfolio Site" />
-    <meta name="author" content="Devyansh" />
-    <link
-      rel="icon"
-      href="https://image.shutterstock.com/image-vector/ds-initial-triangle-260nw-1104809546.jpg"
-      type="image/x-icon"
-    />
-    <link
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      rel="stylesheet"
-      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://www.angularjswiki.com/fontawesome/"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Aldrich"
-      rel="stylesheet"
-    />
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="css/styles.css" />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-151581401-1"
-    ></script>
-    <script
-      src="https://platform.linkedin.com/badges/js/profile.js"
-      async
-      defer
-      type="text/javascript"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
+<head>
+  <meta charset="utf-8" />
+
+  <title>DEVYANSH SINGH</title>
+  <meta name="description" content="Devyansh Protfolio Site" />
+  <meta name="author" content="Devyansh" />
+  <link rel="icon" href="https://image.shutterstock.com/image-vector/ds-initial-triangle-260nw-1104809546.jpg"
+    type="image/x-icon" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://www.angularjswiki.com/fontawesome/" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151581401-1"></script>
+  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "UA-151581401-1");
+  </script>
+  <style>
+    /* CSS Styles */
+    .image-container {
+      position: relative;
+      width: 275px; /* Adjust the container's width and height as needed */
+            height: 300px;
+    }
+
+    .image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transition: opacity 1s ease-in-out;
+      border-radius: 50% !important;
+      /* width: 15vw !important; */
+    }
+
+    #image2 {
+      opacity: 0;
+      /* Initially hidden */
+    }
+
+    /* CSS Animation */
+    @keyframes crossfade {
+      0% {
+        opacity: 1;
       }
-      gtag("js", new Date());
 
-      gtag("config", "UA-151581401-1");
-    </script>
-  </head>
+      100% {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
 
-  <body>
-    <div
-      class="container container-fixes-up aldrich-font"
-      style="padding-left: 73px"
-    >
-      <h1>DEV</h1>
-      <h1 style="color: #4392f1; padding-left: 5px">
-        CV
-        <i class="fa fa-grav fa-1.5x avatar-icon" aria-hidden="true"></i>
-      </h1>
-    </div>
-    <div class="container boxshadow container-fixes">
-      <div class="container-fluid container-fluid-fixes">
-        <div class="row getmeup justify-content-end">
-          <div class="col-auto">
-            <a data-toggle="Model" href="#Model">
-              <i class="fa fa-laptop avatar-icons" aria-hidden="true"></i>
-            </a>
-          </div>
-          <div class="col-auto">
-            <a
-              href="https://drive.google.com/file/d/1QvmlNBcxRD0nWbCRZ896vLoasTLVPKL7/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="fa fa-file-pdf-o avatar-icons" aria-hidden="true"></i>
-            </a>
-          </div>
-          <div class="col-auto">
-            <a
-              href="https://docs.google.com/document/d/1sL2f6J1m4EdHEvC4qey9T6fpOrHPJyYv/edit?usp=sharing&ouid=116712496219145405339&rtpof=true&sd=true"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="fa fa-file-word-o avatar-icons" aria-hidden="true"></i>
-            </a>
-          </div>
-          <div class="col-auto">
-            <a href="tel:9971379059" title="9971379059">
-              <i class="fa fa-phone avatar-icons" aria-hidden="true"></i>
-            </a>
-          </div>
-          <div class="col-auto">
-            <a
-              href="https://github.com/dexter-11/PyPASS"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Major Project"
-            >
-              <i class="fa fa-github avatar-icons" aria-hidden="true"></i>
-            </a>
-          </div>
-          <div class="col-auto">
-            <a
-              href="https://www.linkedin.com/in/devyansh-singh-24a76918b/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="LinkedInProfile"
-            >
-              <i
-                class="fa fa-linkedin-square avatar-icons"
-                aria-hidden="true"
-              ></i>
-            </a>
-          </div>
-          <div class="col-auto">
-            <a
-              href="https://api.whatsapp.com/send?phone=9971379059"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Click to Msg on WhatsApp"
-            >
-              <i class="fa fa-whatsapp avatar-icons" aria-hidden="true"></i>
-            </a>
-          </div>
-          <div class="col-auto">
-            <a
-              href="mailto:devyansh.singh2905@gmail.com?Subject=I'm%20Interested%20In%20You"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Liked my Profile Click on it"
-            >
-              <i class="fa fa-envelope-o avatar-icons" aria-hidden="true"></i>
-            </a>
+<body>
+  <div class="container container-fixes-up aldrich-font" style="padding-left: 73px">
+    <h1>DEV</h1>
+    <h1 style="color: #4392f1; padding-left: 5px">
+      CV
+      <i class="fa fa-grav fa-1.5x avatar-icon" aria-hidden="true"></i>
+    </h1>
+  </div>
+  <div class="container boxshadow container-fixes">
+    <div class="container-fluid container-fluid-fixes">
+      <div class="row getmeup justify-content-end">
+        <div class="col-auto">
+          <a data-toggle="Model" href="#Model">
+            <i class="fa fa-laptop avatar-icons" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="col-auto">
+          <a href="https://drive.google.com/file/d/1QvmlNBcxRD0nWbCRZ896vLoasTLVPKL7/view?usp=sharing" target="_blank"
+            rel="noopener noreferrer">
+            <i class="fa fa-file-pdf-o avatar-icons" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="col-auto">
+          <a href="https://docs.google.com/document/d/1sL2f6J1m4EdHEvC4qey9T6fpOrHPJyYv/edit?usp=sharing&ouid=116712496219145405339&rtpof=true&sd=true"
+            target="_blank" rel="noopener noreferrer">
+            <i class="fa fa-file-word-o avatar-icons" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="col-auto">
+          <a href="tel:9971379059" title="9971379059">
+            <i class="fa fa-phone avatar-icons" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="col-auto">
+          <a href="https://github.com/dexter-11/PyPASS" target="_blank" rel="noopener noreferrer" title="Major Project">
+            <i class="fa fa-github avatar-icons" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="col-auto">
+          <a href="https://www.linkedin.com/in/devyansh-singh-24a76918b/" target="_blank" rel="noopener noreferrer"
+            title="LinkedInProfile">
+            <i class="fa fa-linkedin-square avatar-icons" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="col-auto">
+          <a href="https://api.whatsapp.com/send?phone=9971379059" target="_blank" rel="noopener noreferrer"
+            title="Click to Msg on WhatsApp">
+            <i class="fa fa-whatsapp avatar-icons" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="col-auto">
+          <a href="mailto:devyansh.singh2905@gmail.com?Subject=I'm%20Interested%20In%20You" target="_blank"
+            rel="noopener noreferrer" title="Liked my Profile Click on it">
+            <i class="fa fa-envelope-o avatar-icons" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4 left-content">
+          <div class="image-container">
+            <img src="img/DEVD.jpg" alt="Image 1" class="image" id="image1">
+            <img src="img/devpass.JPG" alt="Image 2" class="image" id="image2">
           </div>
         </div>
-        <div class="row">
-          <div class="col-4 left-content">
-            <img src="./img/DEVD.jpg" class="avatar-profile" alt="" />
-          </div>
-          <div class="col-8 right-content aldrich-font">
-            <h1>
-              I'M
-              <span style="color: #4392f1">DEVYANSH SINGH</span>
-            </h1>
-            <h2>
-              <a
-                href=""
-                class="typewrite"
-                data-period="600"
-                data-type='[ "I am Software Engineer.", "I am FullStack Developer.", "I am Front-End Developer.", "I have worked on AR,AI." ]'
-              >
-                <span class="wrap"></span>
-              </a>
-            </h2>
-            <!-- <h2>Software Engineer
+        <script>
+          // JavaScript to toggle between images
+          const image1 = document.getElementById('image1');
+          const image2 = document.getElementById('image2');
+
+          setInterval(() => {
+            image1.style.animation = 'crossfade 1s ease-in-out';
+            image2.style.animation = 'crossfade 1s ease-in-out';
+
+            setTimeout(() => {
+              // Toggle the images by changing their opacity
+              if (image1.style.opacity === '1') {
+                image1.style.opacity = '0';
+                image2.style.opacity = '1';
+              } else {
+                image1.style.opacity = '1';
+                image2.style.opacity = '0';
+              }
+            }, 500); // Adjust the delay as needed
+          }, 3000); // Change images every 3 seconds (adjust as needed)
+        </script>
+        <div class="col-8 right-content aldrich-font">
+          <h1>
+            I'M
+            <span style="color: #4392f1">DEVYANSH SINGH</span>
+          </h1>
+          <h2>
+            <a href="" class="typewrite" data-period="600"
+              data-type='[ "I am Software Engineer.", "I am FullStack Developer.", "I am Front-End Developer.", "I have worked on AR,AI." ]'>
+              <span class="wrap"></span>
+            </a>
+          </h2>
+          <!-- <h2>Software Engineer
             <span style="color: #173753"> &</span> Data Analyst <span style="color: #173753"> &</span> Worked on AI and AR</h2> -->
-            <div style="overflow: auto; max-height: 200px; padding: 10px">
-              <p>
-                <ul>
-                <li>
-                  During my tenure as a Software Engineer at Schlumberger
-                  Limited, I showcased strong Agile leadership skills by
-                  successfully leading end-to-end projects, consistently
-                  delivering results within 6-8 sprints. My focus on front-end
-                  development, utilizing technologies like Redux for data
-                  management, contributed to improved app performance through
-                  efficient code optimization. I demonstrated proficiency in
-                  designing intricate user interfaces with HTML5, CSS3, and
-                  Material-UI, while leveraging React.js and JavaScript for
-                  solution development in an Agile environment. Additionally, I
-                  mastered PowerApps, executing a successful project, and
-                  collaborated effectively to ensure milestone achievement, all
-                  while maintaining a commitment to continuous learning and
-                  professional growth.
-                </li>
-                <li>
-                  As a Software Engineer Intern at Osmosys Software Solutions, I
-                  played a pivotal role in enhancing system performance by
-                  creating automated test scripts using Selenium Webdriver. I
-                  also developed and rigorously tested web scrapers, employing
-                  JavaScript and XML, for major platforms like Amazon, Walmart,
-                  and Lowes. Furthermore, I added unit tests, conducted
-                  functional testing, and carried out code refactoring to
-                  improve code quality.
-                </li>
-                <li>
-                  During my time as a Data Analyst Intern at Xylem, I
-                  proficiently utilized Python libraries like NumPy and Pandas
-                  for data manipulation tasks. Additionally, I transitioned into
-                  development work, where I created a live webcam feed DLL for
-                  the Hypac project in the United States. This involved
-                  utilizing openCV and C programming. I consistently met project
-                  deadlines while delivering high-quality results.
-                </li>
-              </ul>
-              </p>
+          <div style="overflow: auto; max-height: 200px; padding: 10px">
+            <p>
+            <ul>
+              <li>
+                During my tenure as a Software Engineer at Schlumberger
+                Limited, I showcased strong Agile leadership skills by
+                successfully leading end-to-end projects, consistently
+                delivering results within 6-8 sprints. My focus is on front-end
+                development, utilizing technologies like Redux for data
+                management, contributed to improved app performance through
+                efficient code optimization. I demonstrated proficiency in
+                designing intricate user interfaces with HTML5, CSS3, and
+                Material-UI, while leveraging React.js and JavaScript for
+                solution development in an Agile environment. Additionally, I
+                mastered PowerApps, executing a successful project, and
+                collaborated effectively to ensure milestone achievement, all
+                while maintaining a commitment to continuous learning and
+                professional growth.
+              </li>
+              <li>
+                As a Software Engineer Intern at Osmosys Software Solutions, I
+                played a pivotal role in enhancing system performance by
+                creating automated test scripts using Selenium Webdriver. I
+                also developed and rigorously tested web scrapers, employing
+                JavaScript and XML, for major platforms like Amazon, Walmart,
+                and Lowes. Furthermore, I added unit tests, conducted
+                functional testing, and carried out code refactoring to
+                improve code quality.
+              </li>
+              <li>
+                During my time as a Data Analyst Intern at Xylem, I
+                proficiently utilized Python libraries like NumPy and Pandas
+                for data manipulation tasks. Additionally, I transitioned into
+                development work, where I created a live webcam feed DLL for
+                the Hypac project in the United States. This involved
+                utilizing openCV and C programming. I consistently met project
+                deadlines while delivering high-quality results.
+              </li>
+            </ul>
+            </p>
+          </div>
+          <div class="row justify-content-center" style="padding-top: 2% !important;
+              position : relative !important;
+              animation: mover 3s linear 2s infinite alternate;
+              ">
+            <div class="col-auto fixed-col">
+              <a href="#">
+                <img class="avatar-prof" src="img/c++.png" data-toggle="tooltip" data-placement="bottom"
+                  title="1 years experience" aria-hidden="true" />
+              </a>
             </div>
-            <div
-              class="row justify-content-center"
-              style="padding-top: 2% !important"
-            >
-              <div class="col-auto fixed-col">
-                <a href="#">
-                  <img
-                    class="avatar-prof"
-                    src="img/c++.png"
-                    data-toggle="tooltip"
-                    data-placement="bottom"
-                    title="1 years experience"
-                    aria-hidden="true"
-                  />
-                </a>
-              </div>
-              <div class="col-auto fixed-col">
-                <a href="#">
-                  <img
-                    class="avatar-prof"
-                    src="img/js.jpg"
-                    data-toggle="tooltip"
-                    data-placement="bottom"
-                    title="2 years experience"
-                    aria-hidden="true"
-                  />
-                </a>
-              </div>
-              <div class="col-auto fixed-col">
-                <a href="#">
-                  <img
-                    class="avatar-prof"
-                    src="img/python.png"
-                    data-toggle="tooltip"
-                    data-placement="bottom"
-                    title="6 months  experience"
-                    aria-hidden="true"
-                  />
-                </a>
-              </div>
-              <div class="col-auto fixed-col">
-                <a href="#">
-                  <img
-                    class="avatar-prof"
-                    src="img/html.png"
-                    data-toggle="tooltip"
-                    data-placement="bottom"
-                    title="2 years experience"
-                    aria-hidden="true"
-                  />
-                </a>
-              </div>
-              <div class="col-auto fixed-col">
-                <a href="#">
-                  <img
-                    class="avatar-prof"
-                    src="img/css.jpg"
-                    data-toggle="tooltip"
-                    data-placement="bottom"
-                    title="2 years experience"
-                    aria-hidden="true"
-                  />
-                </a>
-              </div>
-              <div class="col-auto fixed-col">
-                <a href="#">
-                  <img
-                    class="avatar-prof"
-                    src="img/node.png"
-                    data-toggle="tooltip"
-                    data-placement="bottom"
-                    title="6 months experience"
-                    aria-hidden="true"
-                  />
-                </a>
-              </div>
-              <div class="col-auto fixed-col">
-                <a href="#">
-                  <img
-                    class="avatar-prof"
-                    src="img/git.png"
-                    data-toggle="tooltip"
-                    data-placement="bottom"
-                    title="1 years experience"
-                    aria-hidden="true"
-                  />
-                </a>
-              </div>
-              <div class="col-auto fixed-col">
-                <a href="#">
-                  <img
-                    class="avatar-prof"
-                    src="img/xml.png"
-                    data-toggle="tooltip"
-                    data-placement="bottom"
-                    title="6 months experience"
-                    aria-hidden="true"
-                  />
-                </a>
-              </div>
-              <div class="col-auto fixed-col">
-                <a href="#">
-                  <img
-                    class="avatar-prof"
-                    src="img/azuredev.png"
-                    data-toggle="tooltip"
-                    data-placement="bottom"
-                    title="6 months experience"
-                    aria-hidden="true"
-                  />
-                </a>
-              </div>
-              <div class="col-auto fixed-col">
-                <a href="#">
-                  <img
-                    class="avatar-prof"
-                    src="img/ts.jpg"
-                    data-toggle="tooltip"
-                    data-placement="bottom"
-                    title="1 year experience"
-                    aria-hidden="true"
-                  />
-                </a>
-              </div>
-              <div class="col-auto fixed-col">
-                <a href="#">
-                  <img
-                    class="avatar-prof"
-                    src="img/powerapps.jpg"
-                    data-toggle="tooltip"
-                    data-placement="bottom"
-                    title="6 months experience"
-                    aria-hidden="true"
-                  />
-                </a>
-              </div>
+            <div class="col-auto fixed-col">
+              <a href="#">
+                <img class="avatar-prof" src="img/js.jpg" data-toggle="tooltip" data-placement="bottom"
+                  title="2 years experience" aria-hidden="true" />
+              </a>
+            </div>
+            <div class="col-auto fixed-col">
+              <a href="#">
+                <img class="avatar-prof" src="img/python.png" data-toggle="tooltip" data-placement="bottom"
+                  title="6 months  experience" aria-hidden="true" />
+              </a>
+            </div>
+            <div class="col-auto fixed-col">
+              <a href="#">
+                <img class="avatar-prof" src="img/html.png" data-toggle="tooltip" data-placement="bottom"
+                  title="2 years experience" aria-hidden="true" />
+              </a>
+            </div>
+            <div class="col-auto fixed-col">
+              <a href="#">
+                <img class="avatar-prof" src="img/css.jpg" data-toggle="tooltip" data-placement="bottom"
+                  title="2 years experience" aria-hidden="true" />
+              </a>
+            </div>
+            <div class="col-auto fixed-col">
+              <a href="#">
+                <img class="avatar-prof" src="img/node.png" data-toggle="tooltip" data-placement="bottom"
+                  title="6 months experience" aria-hidden="true" />
+              </a>
+            </div>
+            <div class="col-auto fixed-col">
+              <a href="#">
+                <img class="avatar-prof" src="img/git.png" data-toggle="tooltip" data-placement="bottom"
+                  title="1 years experience" aria-hidden="true" />
+              </a>
+            </div>
+            <div class="col-auto fixed-col">
+              <a href="#">
+                <img class="avatar-prof" src="img/xml.png" data-toggle="tooltip" data-placement="bottom"
+                  title="6 months experience" aria-hidden="true" />
+              </a>
+            </div>
+            <div class="col-auto fixed-col">
+              <a href="#">
+                <img class="avatar-prof" src="img/azuredev.png" data-toggle="tooltip" data-placement="bottom"
+                  title="6 months experience" aria-hidden="true" />
+              </a>
+            </div>
+            <div class="col-auto fixed-col">
+              <a href="#">
+                <img class="avatar-prof" src="img/ts.jpg" data-toggle="tooltip" data-placement="bottom"
+                  title="1 year experience" aria-hidden="true" />
+              </a>
+            </div>
+            <div class="col-auto fixed-col">
+              <a href="#">
+                <img class="avatar-prof" src="img/powerapps.jpg" data-toggle="tooltip" data-placement="bottom"
+                  title="6 months experience" aria-hidden="true" />
+              </a>
             </div>
           </div>
         </div>
       </div>
-      <!-- <div class="container-fluid container-fluid-fixes">
+    </div>
+    <!-- <div class="container-fluid container-fluid-fixes">
       <p>Projects</p>
     </div> -->
-    </div>
+  </div>
 
-    <div class="area">
-      <ul class="circles">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
+  <div class="area">
+    <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
 
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/scripts.js"></script>
-  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="js/scripts.js"></script>
+</body>
+
 </html>

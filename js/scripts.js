@@ -60,3 +60,23 @@ window.onload = function() {
   css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
   document.body.appendChild(css);
 };
+
+
+const image1 = document.getElementById('image1');
+const image2 = document.getElementById('image2');
+
+setInterval(() => {
+    image1.style.animation = 'crossfade 1s ease-in-out';
+    image2.style.animation = 'crossfade 1s ease-in-out';
+    
+    setTimeout(() => {
+        // Toggle the images by changing their opacity
+        if (image1.style.opacity === '1') {
+            image1.style.opacity = '0';
+            image2.style.opacity = '1';
+        } else {
+            image1.style.opacity = '1';
+            image2.style.opacity = '0';
+        }
+    }, 500); // Adjust the delay as needed
+}, 3000); // Change images every 3 seconds (adjust as needed)
