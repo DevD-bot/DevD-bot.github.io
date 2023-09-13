@@ -33,8 +33,9 @@
     /* CSS Styles */
     .image-container {
       position: relative;
-      width: 275px; /* Adjust the container's width and height as needed */
-            height: 300px;
+      width: 275px;
+      /* Adjust the container's width and height as needed */
+      height: 300px;
     }
 
     .image {
@@ -74,6 +75,7 @@
   </div>
   <div class="container boxshadow container-fixes">
     <div class="container-fluid container-fluid-fixes">
+      <div style="height: 20%;"></div>
       <div class="row getmeup justify-content-end">
         <div class="col-auto">
           <a data-toggle="Model" href="#Model">
@@ -149,13 +151,71 @@
             }, 500); // Adjust the delay as needed
           }, 3000); // Change images every 3 seconds (adjust as needed)
         </script>
+        <script>
+          var TxtType = function (el, toRotate, period) {
+            this.toRotate = toRotate;
+            this.el = el;
+            this.loopNum = 0;
+            this.period = parseInt(period, 10) || 2000;
+            this.txt = '';
+            this.tick();
+            this.isDeleting = false;
+          };
+
+          TxtType.prototype.tick = function () {
+            var i = this.loopNum % this.toRotate.length;
+            var fullTxt = this.toRotate[i];
+
+            if (this.isDeleting) {
+              this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+              this.txt = fullTxt.substring(0, this.txt.length + 1);
+            }
+
+            this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+            var that = this;
+            var delta = 200 - Math.random() * 250;
+
+            if (this.isDeleting) { delta /= 4; }
+
+            if (!this.isDeleting && this.txt === fullTxt) {
+              delta = this.period;
+              this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === '') {
+              this.isDeleting = false;
+              this.loopNum++;
+              delta = 500;
+            }
+
+            setTimeout(function () {
+              that.tick();
+            }, delta);
+          };
+
+          window.onload = function () {
+            var elements = document.getElementsByClassName('typewrite');
+            for (var i = 0; i < elements.length; i++) {
+              var toRotate = elements[i].getAttribute('data-type');
+              var period = elements[i].getAttribute('data-period');
+              if (toRotate) {
+                new TxtType(elements[i], JSON.parse(toRotate), period);
+              }
+            }
+            // INJECT CSS
+            var css = document.createElement("style");
+            css.type = "text/css";
+            css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+            document.body.appendChild(css);
+          };
+        </script>
         <div class="col-8 right-content aldrich-font">
           <h1>
             I'M
             <span style="color: #4392f1">DEVYANSH SINGH</span>
           </h1>
           <h2>
-            <a href="" class="typewrite" data-period="600"
+            <a href="" class="typewrite" data-period="500"
               data-type='[ "I am Software Engineer.", "I am FullStack Developer.", "I am Front-End Developer.", "I have worked on AR,AI." ]'>
               <span class="wrap"></span>
             </a>
@@ -205,7 +265,7 @@
           </div>
           <div class="row justify-content-center" style="padding-top: 2% !important;
               position : relative !important;
-              animation: mover 3s linear 2s infinite alternate;
+              animation: mover 3s linear 2s infinite alternate !important;
               ">
             <div class="col-auto fixed-col">
               <a href="#">
