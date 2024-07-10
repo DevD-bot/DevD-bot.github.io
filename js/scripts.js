@@ -80,3 +80,8 @@ setInterval(() => {
         }
     }, 500); // Adjust the delay as needed
 }, 3000); // Change images every 3 seconds (adjust as needed)
+
+
+function toggleBackground() {
+  document.body.classList.toggle('black-and-white');
+}
