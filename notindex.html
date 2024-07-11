@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devyansh Singh's Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+            background-color: #121212;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        .light-theme {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .toggle-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #ff9800;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        .toggle-btn:hover {
+            background-color: #e68900;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #ff9800;
+            padding-bottom: 5px;
+        }
+        .card {
+            background-color: #1f1f1f;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .light-theme .card {
+            background-color: #f9f9f9;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        .card-content {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+        .card.visible .card-content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <button class="toggle-btn" onclick="toggleTheme()">Toggle Theme</button>
+    <div class="container">
+        <div class="header">
+            <h1>Devyansh Singh</h1>
+            <p>Welcome to my personal portfolio</p>
+        </div>
+        <div class="section">
+            <h2>About Me</h2>
+            <div class="card">
+                <div class="card-content">
+                    <p>Hi! I'm Devyansh Singh, a passionate developer with a knack for creating stunning websites and applications. My work focuses on delivering high-quality and user-friendly digital experiences.</p>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Portfolio</h2>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Project 1</h3>
+                    <p>Description of Project 1</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Project 2</h3>
+                    <p>Description of Project 2</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Project 3</h3>
+                    <p>Description of Project 3</p>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Contact</h2>
+            <div class="card">
+                <div class="card-content">
+                    <p>Feel free to get in touch with me through my email: devyansh@example.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('light-theme');
+        }
+
+        document.addEventListener('scroll', function() {
+            const cards = document.querySelectorAll('.card');
+            const windowHeight = window.innerHeight;
+
+            cards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+
+                if (cardTop < windowHeight - 100) {
+                    card.classList.add('visible');
+                } else {
+                    card.classList.remove('visible');
+                }
+            });
+        });
+
+        window.dispatchEvent(new Event('scroll'));
+    </script>
+</body>
+</html>
