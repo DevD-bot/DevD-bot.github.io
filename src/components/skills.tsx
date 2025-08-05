@@ -1,176 +1,115 @@
-'use client';
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Code, Database, Cloud, Trophy, Globe, Award } from "lucide-react"
 
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { motion } from 'framer-motion';
-import { Code, Cpu, PenTool, Users } from 'lucide-react';
+const skillCategories = [
+  {
+    title: "Languages",
+    icon: Code,
+    skills: ["C++", "Python", "JavaScript", "Java", "C#"]
+  },
+  {
+    title: "Frontend & Web",
+    icon: Globe,
+    skills: ["React", "Redux", "Angular", "HTML/CSS", "JavaScript"]
+  },
+  {
+    title: "DevOps & Cloud",
+    icon: Cloud,
+    skills: ["Docker", "Kubernetes", "Jenkins", "AWS", "Azure", "GCP"]
+  },
+  {
+    title: "Databases",
+    icon: Database,
+    skills: ["SQL Server", "MongoDB", "Redis", "DynamoDB"]
+  },
+  {
+    title: "Tools & Testing",
+    icon: Award,
+    skills: ["Selenium", "PyTest", "JUnit", "SonarQube"]
+  }
+]
 
-const Skills = () => {
-  const skillsData = [
-    {
-      category: 'Frontend Development',
-      icon: <Code className="h-5 w-5" />,
-      skills: [
-        'HTML',
-        'CSS',
-        'JavaScript/TypeScript',
-        'Tailwind CSS',
-        'Bootstrap',
-        'Next.js',
-        'React',
-        'Vercel AI SDK',
-        'Gsap',
-      ],
-      color: 'bg-blue-50 text-blue-600 border border-blue-200',
-    },
-    {
-      category: 'Backend & Systems',
-      icon: <Cpu className="h-5 w-5" />,
-      skills: [
-        'Unix',
-        'C',
-        'C++',
-        'Python',
-        'Typescript',
-        'Git',
-        'GitHub',
-        'Docker',
-        'GCP',
-        'PostgreSQL',
-      ],
-      color: 'bg-emerald-50 text-emerald-600 border border-emerald-200',
-    },
-    {
-      category: 'Design & Creative Tools',
-      icon: <PenTool className="h-5 w-5" />,
-      skills: ['Figma', 'Davinci Code', 'Illustrator', 'Canva', 'Keynote'],
-      color: 'bg-indigo-50 text-indigo-600 border border-indigo-200',
-    },
-    {
-      category: 'Soft Skills',
-      icon: <Users className="h-5 w-5" />,
-      skills: [
-        'Communication',
-        'Problem-Solving',
-        'Adaptability',
-        'Learning Agility',
-        'Teamwork',
-        'Creativity',
-        'Focus',
-      ],
-      color: 'bg-amber-50 text-amber-600 border border-amber-200',
-    },
-    {
-      category: 'AI & Fullstack Engineering',
-      icon: <Cpu className="h-5 w-5" />,
-      skills: [
-        'LLM Providers (ChatGPT, Whisper, Groq, Mistral & Claude)',
-        'AI Agents',
-        'Prompt engineering',
-        'Vector databases (Weaviate, Pinecone)',
-        'RAG (Retrieval-Augmented Generation)',
-        'Tool routing & calling',
-        'Hugging Face Transformers',
-        'Vercel AI SDK',
-        'Supabase',
-        'Prisma',
-        'Next.js',
-      ],
-      color: 'bg-purple-50 text-purple-600 border border-purple-200',
-    },
-  ];
+const achievements = [
+  {
+    title: "Competitive Coding",
+    items: [
+      "CodeChef June Long Two 2022 Div 4 – Global Rank 1 / 15,000",
+      "CodeChef Starters 42 2022 Div 4 – Global Rank 18 / 12,000"
+    ]
+  },
+  {
+    title: "Certifications & Achievements",
+    items: [
+      "Google HashCode – Issued by Google (May 2020) for placing 5th overall",
+      "SCL (Intermediate) Certificate, HackerRank",
+      "Problem Solving (Intermediate), HackerRank",
+      "JavaScript (Basic), HackerRank",
+      "Google Professional Cloud Security Engineer, Udemy",
+      "Multiple Coursera certificates in AI, Data Science, and Python"
+    ]
+  }
+]
 
-  // Animation variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5, ease: [0.19, 1, 0.22, 1] },
-    },
-  };
-
-  const badgeVariants = {
-    hidden: { opacity: 0, scale: 0.9 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 0.3, ease: 'easeOut' },
-    },
-  };
-
+export function Skills() {
   return (
-    <motion.div
-      initial={{ scale: 0.98, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      transition={{ duration: 0.6, ease: [0.19, 1, 0.22, 1] }}
-      className="mx-auto w-full max-w-5xl rounded-4xl"
-    >
-      <Card className="w-full border-none px-0 pb-12 shadow-none">
-        <CardHeader className="px-0 pb-1">
-          <CardTitle className="text-primary px-0 text-4xl font-bold">
-            Skills & Expertise
-          </CardTitle>
-        </CardHeader>
-
-        <CardContent className="px-0">
-          <motion.div
-            className="space-y-8 px-0"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-          >
-            {skillsData.map((section, index) => (
-              <motion.div
-                key={index}
-                className="space-y-3 px-0"
-                variants={itemVariants}
-              >
-                <div className="flex items-center gap-2">
-                  {section.icon}
-                  <h3 className="text-accent-foreground text-lg font-semibold">
-                    {section.category}
-                  </h3>
-                </div>
-
-                <motion.div
-                  className="flex flex-wrap gap-2"
-                  variants={containerVariants}
-                  initial="hidden"
-                  animate="visible"
-                >
-                  {section.skills.map((skill, idx) => (
-                    <motion.div
-                      key={idx}
-                      variants={badgeVariants}
-                      whileHover={{
-                        scale: 1.04,
-                        transition: { duration: 0.2 },
-                      }}
-                    >
-                      <Badge className={`border px-3 py-1.5 font-normal`}>
+    <section id="skills" className="py-20">
+      <div className="container mx-auto px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-12 font-inter">Skills & Expertise</h2>
+          
+          {/* Skills Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            {skillCategories.map((category, index) => (
+              <Card key={index} className="group hover:shadow-gmail-lg transition-all duration-300 animate-slide-up">
+                <CardHeader className="pb-3">
+                  <CardTitle className="flex items-center text-lg">
+                    <category.icon className="h-5 w-5 mr-3 text-primary group-hover:scale-110 transition-transform" />
+                    {category.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2">
+                    {category.skills.map((skill, skillIndex) => (
+                      <Badge 
+                        key={skillIndex} 
+                        variant="secondary" 
+                        className="hover:bg-primary hover:text-primary-foreground transition-colors cursor-default"
+                      >
                         {skill}
                       </Badge>
-                    </motion.div>
-                  ))}
-                </motion.div>
-              </motion.div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
             ))}
-          </motion.div>
-        </CardContent>
-      </Card>
-    </motion.div>
-  );
-};
-
-export default Skills;
+          </div>
+          
+          {/* Achievements */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {achievements.map((achievement, index) => (
+              <Card key={index} className="group hover:shadow-gmail-lg transition-all duration-300 animate-slide-up border-l-4 border-l-primary">
+                <CardHeader>
+                  <CardTitle className="flex items-center text-xl">
+                    <Trophy className="h-5 w-5 mr-3 text-primary group-hover:scale-110 transition-transform" />
+                    {achievement.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3">
+                    {achievement.items.map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-start">
+                        <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        <span className="text-muted-foreground text-sm">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}

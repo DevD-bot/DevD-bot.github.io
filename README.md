@@ -1,116 +1,73 @@
+# Welcome to your Lovable project
 
+## Project info
 
-# World's first AI portfolio 🤖✨
+**URL**: https://lovable.dev/projects/1e03ccfb-2d48-471b-a027-7d48ba97f5cf
 
-**Static portfolios are dead.**
+## How can I edit this code?
 
-Instead of making you scroll endlessly, my portfolio adapts to *you*. Ask a question — my AI avatar replies instantly.
+There are several ways of editing your application.
 
----
+**Use Lovable**
 
-## 👋 Hey there, I'm Devyansh Singh!
+Simply visit the [Lovable Project](https://lovable.dev/projects/1e03ccfb-2d48-471b-a027-7d48ba97f5cf) and start prompting.
 
-### 🚀 About Me
+Changes made via Lovable will be committed automatically to this repo.
 
-* 👀 Passionate about **re-creating things** and problem-solving.
-* 🌱 Currently diving deep into **Back-End Development**.
-* 💼 Software Engineer at **Videonetics**, with prior experience at **Schlumberger (SLB)** and **Osmosys Software Solutions**.
-* 🏆 Achievements: **Google HashCode - Team Rank 5th, CodeChef Global Rank 18/12000**.
-* 📫 Reach me at **9971379059** (DM or WhatsApp).
+**Use your preferred IDE**
 
----
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
 
-### 🛠️ Tech Stack
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-#### 🚀 Languages & Frameworks
+Follow these steps:
 
-C++ Python JavaScript TypeScript Node.js React Material-UI
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
 
-#### 💻 Tools & Platforms
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
 
-Docker Kubernetes Jenkins Git GitHub Azure Postman
+# Step 3: Install the necessary dependencies.
+npm i
 
----
-
-### 🌟 My Coding Playground
-
-If you're **bored** and love solving problems, feel free to check out my **LeetCode Profile**:  
-LeetCode
-
----
-
-### 📌 Connect with Me
-
-- [LinkedIn](https://linkedin.com/in/devyansh-singh-devd)
-- [GitHub](https://github.com/DevD-bot)
-- WhatsApp: 9971379059
-
----
-
-### 📊 GitHub Stats
-
-<!-- Optionally add your GitHub stats here -->
-
----
-
-### 🎯 Fun Fact
-
-```
-(▀̿Ĺ̯▀̿ ̿)   "I break things to learn how to fix them!"
+# Step 4: Start the development server with auto-reloading and an instant preview.
+npm run dev
 ```
 
-## 👇 What can you ask?
+**Edit a file directly in GitHub**
 
-- 🧠 **Tech recruiter?** Ask about my stack & results  
-- 💻 **Dev?** Dive into my code & mindset  
-- 🧑‍🤝‍🧑 **Friend or family?** See what I’ve been working on  
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
 
----
+**Use GitHub Codespaces**
 
-This is not a portfolio.  
-It’s a **conversation tailored to your curiosity**.
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
 
-## 🚀 How to run
+## What technologies are used for this project?
 
-Want to run this project locally? Here's what you need:
+This project is built with:
 
-### Prerequisites
-- **Node.js** (v18 or higher)
-- **pnpm** package manager
-- **OpenAI API token** (for AI chat functionality)
-- **GitHub token** (for GitHub integration features)
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
 
-### Setup
-1. **Clone the repository**
-   ```bash
-   git clone <your-repo-url>
-   cd portfolio-main
-   ```
+## How can I deploy this project?
 
-2. **Install dependencies**
-   ```bash
-   pnpm install
-   ```
+Simply open [Lovable](https://lovable.dev/projects/1e03ccfb-2d48-471b-a027-7d48ba97f5cf) and click on Share -> Publish.
 
-3. **Environment variables**
-   Create a `.env` file in the root directory:
-   ```env
-   OPENAI_API_KEY=your_openai_api_key_here
-   GITHUB_TOKEN=your_github_token_here
-   ```
+## Can I connect a custom domain to my Lovable project?
 
-4. **Run the development server**
-   ```bash
-   pnpm dev
-   ```
+Yes, you can!
 
-5. **Open your browser**
-   Navigate to `http://localhost:3000`
+To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
-### Getting your **tokens**
-- **OpenAI API Key**: Get it from [platform.openai.com](https://platform.openai.com/api-keys)
-- **GitHub Token**: Generate one at [github.com/settings/tokens](https://github.com/settings/personal-access-tokens) with repo access
-
-#### 🔖 Tags
-
-`#AIPortfolio` `#InnovationInTech` `#DigitalResume` `#JobSearch` `#TechInnovation` `#WebDevelopment` `#FutureTech`
+Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)

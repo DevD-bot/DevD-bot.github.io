@@ -1,92 +1,117 @@
-'use client';
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Mail, Phone, MapPin, Github, Linkedin, ExternalLink } from "lucide-react"
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ChevronRight } from 'lucide-react';
+const contactInfo = [
+  {
+    icon: Mail,
+    label: "Email",
+    value: "devyansh.singh2905@gmail.com",
+    href: "mailto:devyansh.singh2905@gmail.com"
+  },
+  {
+    icon: Phone,
+    label: "Phone",
+    value: "+91 99713 78059",
+    href: "tel:+919971378059"
+  },
+  {
+    icon: MapPin,
+    label: "Location",
+    value: "Bengaluru, Karnataka, India"
+  }
+]
+
+const socialLinks = [
+  {
+    icon: Github,
+    label: "GitHub",
+    value: "github.com/DevD2905",
+    href: "https://github.com/DevD2905"
+  },
+  {
+    icon: Linkedin,
+    label: "LinkedIn",
+    value: "linkedin.com/in/devyansh-singh",
+    href: "https://linkedin.com/in/devyansh-singh"
+  }
+]
 
 export function Contact() {
-  // Contact information
-  const contactInfo = {
-    name: 'Devyansh Singh',
-    email: 'devyansh.singh2905@gmail.com',
-    handle: '@Devyansh.Singh',
-    socials: [
-      {
-        name: 'LinkedIn',
-        url: 'https://www.linkedin.com/in/devyansh-singh-devd',
-      },
-      // {
-      //   name: 'Youtube',
-      //   url: 'https://www.youtube.com/@toukoum',
-      // },
-      // {
-      //   name: 'Instagram',
-      //   url: 'https://www.instagram.com/raphael.giraud/',
-      // },
-      // {
-      //   name: 'Discord',
-      //   url: 'https://discord.com/users/toukoum',
-      // },
-      {
-        name: 'Github',
-        url: 'https://github.com/DevD-bot',
-      },
-      // {
-      //   name: 'X',
-      //   url: 'https://x.com/toukoumcode',
-      // },
-    ],
-  };
-
-  // Function to handle opening links
-  const openLink = (url: string) => {
-    window.open(url, '_blank', 'noopener,noreferrer');
-  };
-
   return (
-    <div className="mx-auto mt-8 w-full">
-      <div className="bg-accent w-full overflow-hidden rounded-3xl px-6 py-8 font-sans sm:px-10 md:px-16 md:py-12">
-        {/* Header Section */}
-        <div className="mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between">
-          <h2 className="text-foreground text-3xl font-semibold md:text-4xl">
-            Contacts
-          </h2>
-          <span className="mt-2 sm:mt-0">
-            {contactInfo.handle}
-          </span>
-        </div>
+    <section id="contact" className="py-20">
+      <div className="container mx-auto px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-12 font-inter">Get In Touch</h2>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Contact Information */}
+            <Card className="animate-slide-up">
+              <CardHeader>
+                <CardTitle className="text-xl font-semibold mb-4">Contact Information</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                {contactInfo.map((contact, index) => (
+                  <div key={index} className="flex items-center group">
+                    <contact.icon className="h-5 w-5 mr-4 text-primary group-hover:scale-110 transition-transform" />
+                    <div>
+                      <p className="text-sm text-muted-foreground">{contact.label}</p>
+                      {contact.href ? (
+                        <a 
+                          href={contact.href}
+                          className="font-medium hover:text-primary transition-colors"
+                        >
+                          {contact.value}
+                        </a>
+                      ) : (
+                        <p className="font-medium">{contact.value}</p>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
 
-        {/* Email Section */}
-        <div className="mt-8 flex flex-col md:mt-10">
-          <div
-            className="group mb-5 cursor-pointer"
-            onClick={() => openLink(`mailto:${contactInfo.email}`)}
-          >
-            <div className="flex items-center gap-1">
-              <span className="text-base font-medium text-blue-500 hover:underline sm:text-lg">
-                {contactInfo.email}
-              </span>
-              <ChevronRight className="h-5 w-5 text-blue-500 transition-transform duration-300 group-hover:translate-x-1" />
-            </div>
-          </div>
-
-          {/* Social Links */}
-          <div className="flex flex-wrap gap-x-6 gap-y-5 sm:gap-x-8">
-            {contactInfo.socials.map((social) => (
-              <button
-                key={social.name}
-                className="text-muted-foreground hover:text-foreground cursor-pointer text-sm transition-colors"
-                onClick={() => openLink(social.url)}
-                title={social.name}
-              >
-                {social.name}
-              </button>
-            ))}
+            {/* Social Links */}
+            <Card className="animate-slide-up">
+              <CardHeader>
+                <CardTitle className="text-xl font-semibold mb-4">Connect With Me</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                {socialLinks.map((social, index) => (
+                  <a 
+                    key={index}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center group p-3 rounded-lg hover:bg-secondary transition-colors"
+                  >
+                    <social.icon className="h-5 w-5 mr-4 text-primary group-hover:scale-110 transition-transform" />
+                    <div className="flex-1">
+                      <p className="text-sm text-muted-foreground">{social.label}</p>
+                      <p className="font-medium group-hover:text-primary transition-colors">{social.value}</p>
+                    </div>
+                    <ExternalLink className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </a>
+                ))}
+                
+                <div className="pt-4">
+                  <Button 
+                    className="w-full bg-gradient-primary hover:bg-primary-hover transition-all"
+                    size="lg"
+                    asChild
+                  >
+                    <a href="mailto:devyansh.singh2905@gmail.com">
+                      <Mail className="h-5 w-5 mr-2" />
+                      Send Email
+                    </a>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
-    </div>
-  );
+    </section>
+  )
 }
-
-export default Contact;
