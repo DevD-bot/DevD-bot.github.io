@@ -16,7 +16,7 @@ export function Footer() {
           
           <div className="flex items-center justify-center space-x-6 mb-6">
             <a 
-              href="https://github.com/DevD2905" 
+              href="https://github.com/DevD-bot" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -24,7 +24,7 @@ export function Footer() {
               <Github className="h-5 w-5" />
             </a>
             <a 
-              href="https://linkedin.com/in/devyansh-singh" 
+              href="https://www.linkedin.com/in/devyansh-singh-devd/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -44,7 +44,7 @@ export function Footer() {
               Made with <Heart className="h-4 w-4 mx-1 text-red-500" /> by Devyansh Singh
             </p>
             <p className="text-xs text-muted-foreground mt-2">
-              © 2024 Devyansh Singh. All rights reserved.
+              © 2025 Devyansh Singh. All rights reserved.
             </p>
           </div>
         </div>

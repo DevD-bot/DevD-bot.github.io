@@ -12,7 +12,7 @@ export function Hero() {
           <div className="animate-fade-in">
             <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-6">
               <Award className="h-4 w-4 mr-2" />
-              5★ on CodeChef | Ex-SLB
+              Building AI powered VMS | 5★ on CodeChef | Ex-SLB
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold font-inter mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">

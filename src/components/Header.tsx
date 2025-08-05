@@ -10,7 +10,7 @@ export function Header() {
       <div className="container mx-auto px-4 py-4">
         <nav className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <Mail className="h-8 w-8 text-primary" />
+            {/* <Mail className="h-8 w-8 text-primary" /> */}
             <h1 className="text-2xl font-bold font-inter">Devyansh Singh</h1>
           </div>
           
@@ -39,7 +39,7 @@ export function Header() {
               asChild
               className="rounded-full"
             >
-              <a href="https://github.com/DevD2905" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/DevD-bot" target="_blank" rel="noopener noreferrer">
                 <Github className="h-5 w-5" />
               </a>
             </Button>
@@ -50,7 +50,7 @@ export function Header() {
               asChild
               className="rounded-full"
             >
-              <a href="https://linkedin.com/in/devyansh-singh" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/devyansh-singh-devd/" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="h-5 w-5" />
               </a>
             </Button>

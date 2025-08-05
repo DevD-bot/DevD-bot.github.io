@@ -12,8 +12,8 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+91 99713 78059",
-    href: "tel:+919971378059"
+    value: "+91 99713 79059",
+    href: "tel:+919971379059"
   },
   {
     icon: MapPin,
@@ -26,14 +26,14 @@ const socialLinks = [
   {
     icon: Github,
     label: "GitHub",
-    value: "github.com/DevD2905",
-    href: "https://github.com/DevD2905"
+    value: "github.com/DevD-bot",
+    href: "https://github.com/DevD-bot"
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
-    value: "linkedin.com/in/devyansh-singh",
-    href: "https://linkedin.com/in/devyansh-singh"
+    value: "www.linkedin.com/in/devyansh-singh-devd/",
+    href: "https://www.linkedin.com/in/devyansh-singh-devd/"
   }
 ]
 
