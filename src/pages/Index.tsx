@@ -2,9 +2,9 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { Experience } from "@/components/Experience";
-import { Skills } from "@/components/Skills";
+import { Skills } from "@/components/skills";
 import { Education } from "@/components/Education";
-import { Contact } from "@/components/Contact";
+import { Contact } from "@/components/contact";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
