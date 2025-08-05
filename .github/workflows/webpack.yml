@@ -1,5 +1,7 @@
+# .github/workflows/deploy.yml
 name: Build & Deploy to GitHub Pages
 
+# Only run on real source changes to main (ignore dist/ uploads)
 on:
   push:
     branches: [ main ]
@@ -9,37 +11,44 @@ on:
   pull_request:
     branches: [ main ]
 
+# Grant the Pages actions the rights they need
+permissions:
+  contents: read        # for checkout
+  pages: write          # to publish the site
+  id-token: write       # if you use OIDC (not strictly needed here)
+
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [18.x,20.x,22.x]
+        node-version: [18.x, 20.x, 22.x]
 
     steps:
-    - uses: actions/checkout@v4
+      - name: Checkout source
+        uses: actions/checkout@v4
 
-    - name: Setup Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
 
-    - name: Install & build
-      run: |
-        npm ci
-        npm run build
+      - name: Install & Build
+        run: |
+          npm ci
+          npm run build
 
-    - name: Configure Pages
-      uses: actions/configure-pages@v3
+      - name: Configure Pages
+        uses: actions/configure-pages@v3
 
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v1
-      with:
-        path: ./dist
+      - name: Upload built site
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: dist
 
   deploy:
-    needs: build
     runs-on: ubuntu-latest
+    needs: build
     steps:
-    - name: Deploy to GitHub Pages
-      uses: actions/deploy-pages@v1
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
