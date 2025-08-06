@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Moon, Sun, Mail, Download, Github, Linkedin } from "lucide-react"
 import { useTheme } from "./ThemeProvider"
 
+
 export function Header() {
   const { theme, setTheme } = useTheme()
 
@@ -55,9 +56,16 @@ export function Header() {
               </a>
             </Button>
             
-            <Button variant="default" size="sm" className="bg-gradient-primary hover:bg-primary-hover transition-all">
-              <Download className="h-4 w-4 mr-2" />
-              Resume
+            <Button variant="default" size="sm" className="bg-gradient-primary hover:bg-primary-hover transition-all" asChild>
+              <a 
+                href="/Resume.pdf"     // <-- path to your static file
+                download="Devyansh_Singh_Resume.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Download className="h-4 w-4 mr-2" />
+                Resume
+              </a>
             </Button>
           </div>
         </nav>
