@@ -1,43 +1,37 @@
-# .github/workflows/deploy.yml
-name: Build & Deploy to GitHub Pages
+name: Build & Deploy to gh-pages
 
 on:
   push:
     branches: [ main ]
-    # Don’t re-run when only dist/ or workflow changes
     paths-ignore:
       - 'dist/**'
       - '.github/workflows/deploy.yml'
 
 jobs:
-  build-and-deploy:
+  build-deploy:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [18.x, 20.x, 22.x]
+        node-version: [18.x,20.x,22.x]
 
     steps:
-      # 1) Check out source
       - uses: actions/checkout@v4
         with:
-          persist-credentials: true  # allow pushing
+          persist-credentials: true
 
-      # 2) Setup Node
-      - name: Setup Node.js ${{ matrix.node-version }}
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
 
-      # 3) Install & build
-      - name: Install dependencies & build
+      - name: Install & build
         run: |
           npm ci
           npm run build
 
-      # 4) Deploy dist/ to the gh-pages branch
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages   # push here
-          publish_dir: ./dist        # the folder Vite outputs
+          publish_branch: gh-pages
+          publish_dir: ./dist
