@@ -1,0 +1,42 @@
+name: Build & Publish to GitHub Pages (docs)
+
+on:
+  push:
+    branches: [ main ]
+    # Avoid infinite loops when docs/ changes
+    paths-ignore:
+      - 'docs/**'
+      - '.github/workflows/deploy.yml'
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x,20.x,22.x]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install & build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Move build into docs/
+        run: |
+          rm -rf docs
+          mv dist docs
+
+      - name: Commit & push docs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs
+          git commit -m "ci: update docs from dist [skip ci]" || echo "No changes to commit"
+          git push
