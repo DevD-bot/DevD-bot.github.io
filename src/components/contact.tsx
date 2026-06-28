@@ -1,27 +1,11 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Code2, Trophy } from "lucide-react"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Code2, Trophy, Send } from "lucide-react"
 
-const contactInfo = [
-  {
-    icon: Mail,
-    label: "Email",
-    value: "devyansh.singh2905@gmail.com",
-    href: "mailto:devyansh.singh2905@gmail.com"
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "+91 99713 79059",
-    href: "tel:+919971379059"
-  },
-  {
-    icon: MapPin,
-    label: "Location",
-    value: "Bengaluru, India"
-  }
-]
+
 
 const socialLinks = [
   {
@@ -67,45 +51,32 @@ export function Contact() {
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Contact Information */}
+            {/* Contact Form */}
             <Card className="glass-strong border-0 animate-slide-up">
               <CardHeader>
-                <CardTitle className="text-lg font-semibold">Contact Information</CardTitle>
+                <CardTitle className="text-lg font-semibold">Send a Message</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-5">
-                {contactInfo.map((contact, index) => (
-                  <div key={index} className="flex items-center group">
-                    <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mr-4 group-hover:bg-primary/20 transition-colors flex-shrink-0">
-                      <contact.icon className="h-4 w-4 text-primary" />
+              <CardContent>
+                <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); alert("Thanks for reaching out! I'll get back to you soon."); }}>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <label htmlFor="name" className="text-xs font-medium text-muted-foreground">Name</label>
+                      <Input id="name" placeholder="John Doe" className="bg-background/50 border-border/50 focus-visible:ring-primary/50" required />
                     </div>
-                    <div>
-                      <p className="text-xs text-muted-foreground uppercase tracking-wider">{contact.label}</p>
-                      {contact.href ? (
-                        <a 
-                          href={contact.href}
-                          className="font-medium text-sm hover:text-primary transition-colors"
-                        >
-                          {contact.value}
-                        </a>
-                      ) : (
-                        <p className="font-medium text-sm">{contact.value}</p>
-                      )}
+                    <div className="space-y-2">
+                      <label htmlFor="email" className="text-xs font-medium text-muted-foreground">Email</label>
+                      <Input id="email" type="email" placeholder="john@example.com" className="bg-background/50 border-border/50 focus-visible:ring-primary/50" required />
                     </div>
                   </div>
-                ))}
-                
-                <div className="pt-3">
-                  <Button 
-                    className="w-full bg-gradient-primary hover:opacity-90 transition-all shadow-lg shadow-primary/20"
-                    size="lg"
-                    asChild
-                  >
-                    <a href="mailto:devyansh.singh2905@gmail.com">
-                      <Mail className="h-4 w-4 mr-2" />
-                      Send Email
-                    </a>
+                  <div className="space-y-2">
+                    <label htmlFor="message" className="text-xs font-medium text-muted-foreground">Message</label>
+                    <Textarea id="message" placeholder="How can we collaborate?" rows={4} className="bg-background/50 border-border/50 focus-visible:ring-primary/50 resize-none" required />
+                  </div>
+                  <Button type="submit" className="w-full bg-gradient-primary hover:opacity-90 transition-all shadow-lg shadow-primary/20 mt-2">
+                    <Send className="h-4 w-4 mr-2" />
+                    Send Message
                   </Button>
-                </div>
+                </form>
               </CardContent>
             </Card>
 

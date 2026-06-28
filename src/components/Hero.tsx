@@ -38,10 +38,10 @@ export function Hero() {
                 Bengaluru, India
               </div>
               <div className="hidden sm:block w-1 h-1 rounded-full bg-border"></div>
-              <div className="flex items-center text-sm text-muted-foreground">
-                <Mail className="h-4 w-4 mr-2 text-primary/70" />
-                devyansh.singh2905@gmail.com
-              </div>
+              <a href="https://www.linkedin.com/in/devyansh-singh-devd/" target="_blank" rel="noopener noreferrer" className="flex items-center text-sm text-muted-foreground hover:text-primary transition-colors">
+                <TrendingUp className="h-4 w-4 mr-2 text-primary/70" />
+                Available for opportunities
+              </a>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

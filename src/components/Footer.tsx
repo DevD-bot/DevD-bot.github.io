@@ -5,7 +5,7 @@ const footerLinks = [
   { icon: Github, href: "https://github.com/DevD-bot", label: "GitHub" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/devyansh-singh-devd/", label: "LinkedIn" },
   { icon: Code2, href: "https://leetcode.com/DevD2905/", label: "LeetCode" },
-  { icon: Mail, href: "mailto:devyansh.singh2905@gmail.com", label: "Email" },
+  { icon: Mail, href: "#contact", label: "Contact" },
 ]
 
 export function Footer() {
