@@ -2,106 +2,105 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Gmail-themed design system with beautiful colors and gradients */
+/* Modern portfolio design system — sleek blue-violet palette */
 
 @layer base {
   :root {
-    /* Gmail Light Theme */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 12%;
+    /* Light Theme */
+    --background: 220 20% 97%;
+    --foreground: 224 30% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 12%;
+    --card-foreground: 224 30% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 12%;
+    --popover-foreground: 224 30% 12%;
 
-    /* Gmail Red Primary */
-    --primary: 4 90% 58%;
+    /* Blue-Violet Primary */
+    --primary: 234 89% 64%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 4 90% 52%;
+    --primary-hover: 234 89% 56%;
 
-    /* Gmail Gray Secondary */
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 20%;
+    /* Cool Gray Secondary */
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 224 20% 25%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 10% 46%;
 
-    --accent: 4 90% 58%;
+    --accent: 260 70% 58%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 96%;
-    --ring: 4 90% 58%;
+    --border: 220 13% 91%;
+    --input: 220 14% 96%;
+    --ring: 234 89% 64%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    /* Gmail-inspired gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(4 90% 65%));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(0 0% 98%));
-    --gradient-hero: linear-gradient(135deg, hsl(4 90% 58%) 0%, hsl(14 90% 60%) 100%);
-    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(234 89% 64%), hsl(260 70% 58%));
+    --gradient-secondary: linear-gradient(135deg, hsl(220 14% 96%), hsl(220 14% 98%));
+    --gradient-hero: linear-gradient(135deg, hsl(234 89% 64%) 0%, hsl(260 70% 58%) 50%, hsl(300 65% 55%) 100%);
+    --gradient-text: linear-gradient(135deg, hsl(234 89% 64%), hsl(260 70% 58%));
+    --gradient-glow: radial-gradient(ellipse at 50% 0%, hsl(234 89% 64% / 0.15) 0%, transparent 60%);
+
     /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1);
-    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1);
-    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.1);
-    
+    --shadow-sm: 0 1px 2px 0 hsl(224 30% 12% / 0.04);
+    --shadow-md: 0 4px 12px -2px hsl(224 30% 12% / 0.08);
+    --shadow-lg: 0 12px 32px -4px hsl(224 30% 12% / 0.1);
+    --shadow-xl: 0 24px 48px -8px hsl(224 30% 12% / 0.12);
+    --shadow-glow: 0 0 40px hsl(234 89% 64% / 0.15);
+
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-bounce: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    /* Gmail Dark Theme */
-    --background: 0 0% 8%;
-    --foreground: 0 0% 95%;
+    /* Dark Theme — deep navy */
+    --background: 224 30% 6%;
+    --foreground: 220 14% 96%;
 
-    --card: 0 0% 12%;
-    --card-foreground: 0 0% 95%;
+    --card: 224 25% 10%;
+    --card-foreground: 220 14% 96%;
 
-    --popover: 0 0% 12%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 224 25% 10%;
+    --popover-foreground: 220 14% 96%;
 
-    --primary: 4 90% 58%;
+    --primary: 234 89% 67%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 4 90% 52%;
+    --primary-hover: 234 89% 60%;
 
-    --secondary: 0 0% 16%;
-    --secondary-foreground: 0 0% 80%;
+    --secondary: 224 20% 14%;
+    --secondary-foreground: 220 14% 80%;
 
-    --muted: 0 0% 16%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 224 20% 14%;
+    --muted-foreground: 220 10% 55%;
 
-    --accent: 4 90% 58%;
+    --accent: 260 70% 62%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 16%;
-    --ring: 4 90% 58%;
+    --border: 224 20% 16%;
+    --input: 224 20% 14%;
+    --ring: 234 89% 67%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(234 89% 55%) 0%, hsl(260 70% 48%) 50%, hsl(300 65% 45%) 100%);
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -120,5 +119,35 @@
 
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+
+  .glass {
+    @apply bg-card/70 backdrop-blur-xl border border-border/50;
+  }
+
+  .glass-strong {
+    @apply bg-card/90 backdrop-blur-2xl border border-border/60;
+  }
+
+  .glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300;
+  }
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
   }
 }

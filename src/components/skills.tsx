@@ -1,32 +1,42 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Code, Database, Cloud, Trophy, Globe, Award } from "lucide-react"
+import { Code, Database, Cloud, Trophy, Globe, Award, LineChart, BookOpen, Layers } from "lucide-react"
 
 const skillCategories = [
   {
-    title: "Languages",
+    title: "Programming",
     icon: Code,
-    skills: ["C++", "Python", "JavaScript", "Java", "C#"]
+    skills: ["C++", "Python", "JavaScript", "Java", "SQL"]
   },
   {
-    title: "Frontend & Web",
+    title: "Quantitative Finance",
+    icon: LineChart,
+    skills: ["Backtesting", "Alpha Research", "Market Making", "Statistical Arbitrage"]
+  },
+  {
+    title: "Trading Concepts",
+    icon: Layers,
+    skills: ["Tick Data Analysis", "Sharpe Ratio", "Risk Management"]
+  },
+  {
+    title: "Libraries",
+    icon: BookOpen,
+    skills: ["Pandas", "NumPy", "SciPy"]
+  },
+  {
+    title: "Frontend",
     icon: Globe,
-    skills: ["React", "Redux", "Angular", "HTML/CSS", "JavaScript"]
+    skills: ["React", "Angular"]
   },
   {
     title: "DevOps & Cloud",
     icon: Cloud,
-    skills: ["Docker", "Kubernetes", "Jenkins", "AWS", "Azure", "GCP"]
+    skills: ["Docker", "Kubernetes", "Jenkins", "AWS", "Azure"]
   },
   {
     title: "Databases",
     icon: Database,
-    skills: ["SQL Server", "MongoDB", "Redis", "DynamoDB"]
-  },
-  {
-    title: "Tools & Testing",
-    icon: Award,
-    skills: ["Selenium", "PyTest", "JUnit", "SonarQube"]
+    skills: ["MongoDB", "Redis", "SQL Server", "DynamoDB"]
   }
 ]
 
@@ -34,47 +44,60 @@ const achievements = [
   {
     title: "Competitive Coding",
     items: [
-      "CodeChef June Long Two 2022 Div 4 – Global Rank 1 / 15,000",
-      "CodeChef Starters 42 2022 Div 4 – Global Rank 18 / 12,000"
+      "CodeChef June Long Challenge 2022 – Global Rank 1 / 15,000+",
+      "CodeChef Starters 42 – Global Rank 18 / 12,000+",
+      "Google HashCode 2020 – Global Rank 5"
     ]
   },
   {
-    title: "Certifications & Achievements",
+    title: "Quantitative Research",
     items: [
-      "Google HashCode – Issued by Google (May 2020) for placing 5th overall",
-      "SCL (Intermediate) Certificate, HackerRank",
-      "Problem Solving (Intermediate), HackerRank",
-      "JavaScript (Basic), HackerRank",
-      "Google Professional Cloud Security Engineer, Udemy",
-      "Multiple Coursera certificates in AI, Data Science, and Python"
+      "Built quantitative trading simulations and backtesting engines using Python and C++",
+      "Researched alpha generation, market microstructure, and statistical signal models"
+    ]
+  },
+  {
+    title: "Certifications",
+    items: [
+      "HackerRank: SQL, Problem Solving",
+      "Coursera: Data Science in Python",
+      "Google Cloud Security Engineer"
     ]
   }
 ]
 
 export function Skills() {
   return (
-    <section id="skills" className="py-20">
-      <div className="container mx-auto px-4">
+    <section id="skills" className="py-24 relative">
+      <div className="absolute inset-0 bg-secondary/40"></div>
+      <div className="container mx-auto px-4 relative">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 font-inter">Skills & Expertise</h2>
+          <div className="text-center mb-16">
+            <Badge variant="secondary" className="mb-4 text-xs tracking-wider uppercase">
+              Expertise
+            </Badge>
+            <h2 className="text-4xl font-bold font-inter">Skills & Achievements</h2>
+          </div>
           
           {/* Skills Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-16">
             {skillCategories.map((category, index) => (
-              <Card key={index} className="group hover:shadow-gmail-lg transition-all duration-300 animate-slide-up">
-                <CardHeader className="pb-3">
-                  <CardTitle className="flex items-center text-lg">
-                    <category.icon className="h-5 w-5 mr-3 text-primary group-hover:scale-110 transition-transform" />
+              <Card key={index} className="group hover-lift glass-strong border-0 animate-slide-up">
+                <CardHeader className="pb-2 pt-5 px-5">
+                  <CardTitle className="flex items-center text-sm font-semibold">
+                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center mr-2.5 group-hover:bg-primary/20 transition-colors">
+                      <category.icon className="h-4 w-4 text-primary" />
+                    </div>
                     {category.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2">
+                <CardContent className="px-5 pb-5">
+                  <div className="flex flex-wrap gap-1.5">
                     {category.skills.map((skill, skillIndex) => (
                       <Badge 
                         key={skillIndex} 
                         variant="secondary" 
-                        className="hover:bg-primary hover:text-primary-foreground transition-colors cursor-default"
+                        className="text-xs hover:bg-primary/10 hover:text-primary transition-colors cursor-default"
                       >
                         {skill}
                       </Badge>
@@ -86,21 +109,22 @@ export function Skills() {
           </div>
           
           {/* Achievements */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {achievements.map((achievement, index) => (
-              <Card key={index} className="group hover:shadow-gmail-lg transition-all duration-300 animate-slide-up border-l-4 border-l-primary">
-                <CardHeader>
-                  <CardTitle className="flex items-center text-xl">
-                    <Trophy className="h-5 w-5 mr-3 text-primary group-hover:scale-110 transition-transform" />
+              <Card key={index} className="group hover-lift glass-strong border-0 animate-slide-up overflow-hidden relative">
+                <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-primary"></div>
+                <CardHeader className="pb-3">
+                  <CardTitle className="flex items-center text-base">
+                    <Trophy className="h-4 w-4 mr-2.5 text-primary" />
                     {achievement.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-3">
+                  <ul className="space-y-2.5">
                     {achievement.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-start">
-                        <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        <span className="text-muted-foreground text-sm">{item}</span>
+                        <span className="w-1.5 h-1.5 bg-primary/60 rounded-full mt-1.5 mr-2.5 flex-shrink-0"></span>
+                        <span className="text-muted-foreground text-xs leading-relaxed">{item}</span>
                       </li>
                     ))}
                   </ul>
